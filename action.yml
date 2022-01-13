@@ -1,5 +1,9 @@
 name: 'BuildPulse-Discord'
 description: 'Gather top 5 disruptive tests from BuildPulse and post them to a Discord channel'
+branding:
+  icon: 'activity'
+  color: 'yellow'
+
 
 inputs:
   buildPulse-api-token:
