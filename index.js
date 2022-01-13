@@ -2,13 +2,11 @@ const axios = require('axios');
 const core = require('@actions/core');
 
 (async () => {
-
-  console.log("FETCH BP");
   const bpData = (await axios(
     {
       url: 'https://buildpulse.io/api/repos/rabatta-aps/rabatta/tests',
       headers: {
-        Authorization: core.getInput('buildPulse-api-token')
+        Authorization: `token ${core.getInput('buildPulse-api-token')}`
       }
     }
   )).data;
@@ -27,7 +25,6 @@ const core = require('@actions/core');
   }
 
   content += '```';
-  console.log("POST dISCORD");
 
   axios({
     method: 'POST',
