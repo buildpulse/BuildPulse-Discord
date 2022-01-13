@@ -2,9 +2,8 @@ const axios = require('axios');
 const core = require('@actions/core');
 
 (async () => {
-  console.log(core.getInput('buildPulse-api-token'));
-  console.log(core.getInput('discord-webhook'));
 
+  console.log("FETCH BP");
   const bpData = (await axios(
     {
       url: 'https://buildpulse.io/api/repos/rabatta-aps/rabatta/tests',
@@ -28,6 +27,7 @@ const core = require('@actions/core');
   }
 
   content += '```';
+  console.log("POST dISCORD");
 
   axios({
     method: 'POST',
