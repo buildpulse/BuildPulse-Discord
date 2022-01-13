@@ -1,0 +1,15 @@
+name: 'BuildPulse-Discord'
+description: 'Gather top 5 disruptive tests from BuildPulse and post them to a Discord channel'
+
+inputs:
+  buildPulse-api-token:
+    description: 'API token for BuildPulse'
+    required: true
+
+  discord-webhook:
+    description: 'URL for Discord webhook'
+    required: true
+
+runs:
+  using: 'node12'
+  main: 'index.js'

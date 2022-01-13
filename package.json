@@ -1,0 +1,24 @@
+{
+  "name": "buildpulse-discord",
+  "version": "1.0.0",
+  "description": "A Github Action for reporting test information from BuildPulse to a Discord channel",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rabatta-ApS/BuildPulse-Discord.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Rabatta-ApS/BuildPulse-Discord/issues"
+  },
+  "homepage": "https://github.com/Rabatta-ApS/BuildPulse-Discord#readme",
+  "dependencies": {
+    "@actions/core": "^1.6.0",
+    "axios": "^0.24.0"
+  }
+}
