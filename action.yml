@@ -14,6 +14,16 @@ inputs:
     description: 'URL for Discord webhook'
     required: true
 
+  repository:
+    description: |
+      The repository whose disruptive tests you want to fetch.
+
+      Must be specified as "<owner-name>/<repository-name>" (example:
+      "facebook/react").
+
+      Defaults to the repository that is running the workflow.
+    required: false
+
 runs:
   using: 'node12'
   main: 'index.js'

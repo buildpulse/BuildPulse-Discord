@@ -3,7 +3,7 @@ const core = require('@actions/core');
 
 try {
   (async () => {
-    const repo = process.env.GITHUB_REPOSITORY;
+    const repo = core.getInput('repository') || process.env.GITHUB_REPOSITORY;
     const bpData = (await axios(
       {
         url: `https://buildpulse.io/api/repos/${repo}/tests`,
