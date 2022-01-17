@@ -3,9 +3,10 @@ const core = require('@actions/core');
 
 try {
   (async () => {
+    const repo = core.getInput('repository') || process.env.GITHUB_REPOSITORY;
     const bpData = (await axios(
       {
-        url: 'https://buildpulse.io/api/repos/rabatta-aps/rabatta/tests',
+        url: `https://buildpulse.io/api/repos/${repo}/tests`,
         headers: {
           Authorization: `token ${core.getInput('buildPulse-api-token')}`
         }

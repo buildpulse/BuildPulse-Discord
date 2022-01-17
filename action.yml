@@ -1,5 +1,5 @@
 name: 'BuildPulse-Discord'
-description: 'Gather top 5 disruptive tests from BuildPulse and post them to a Discord channel'
+description: 'Gather top 3 disruptive tests from BuildPulse and post them to a Discord channel'
 branding:
   icon: 'activity'
   color: 'yellow'
@@ -13,6 +13,16 @@ inputs:
   discord-webhook:
     description: 'URL for Discord webhook'
     required: true
+
+  repository:
+    description: |
+      The repository whose disruptive tests you want to fetch.
+
+      Must be specified as "<owner-name>/<repository-name>" (example:
+      "facebook/react").
+
+      Defaults to the repository that is running the workflow.
+    required: false
 
 runs:
   using: 'node12'
