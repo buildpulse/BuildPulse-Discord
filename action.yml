@@ -11,7 +11,10 @@ inputs:
     required: true
 
   discord-webhook:
-    description: 'URL for Discord webhook'
+    description: |
+      URL for Discord webhook. 
+      
+      Can be generated from the channel settings, on the channel that you wish to post digests to.
     required: true
 
   repository:
