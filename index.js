@@ -21,7 +21,7 @@ try {
   
     let content = '__**The most flaky tests the last 14 days**__\n```';
   
-    if (test.length > 0) {
+    if (tests.length > 0) {
       for (let i = 0; i < 3 && i < tests.length; i++) {
         const test = tests[i];
         content += `Disruptiveness: ${test.disruptiveness} - ${test.name}\n`;
