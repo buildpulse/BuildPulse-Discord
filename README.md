@@ -3,7 +3,7 @@ A Github Action for reporting test information from BuildPulse to a Discord chan
 
 ```yml
 - name: Send Digest
-  uses: Rabatta-ApS/BuildPulse-Discord@v1.0
+  uses: Rabatta-ApS/BuildPulse-Discord@v2.1.0
   with:
     buildPulse-api-token: ${{ secrets.BUILDPULSE_API_TOKEN }}
     discord-webhook: ${{ secrets.DISCORD_BUILDPULSE_WEBHOOK }}
@@ -12,7 +12,7 @@ A Github Action for reporting test information from BuildPulse to a Discord chan
 By default the action fetches tests from the repository that it is being run in. Alternatively, you can specify another repository using the **repository** input.
 ```yml
 - name: Send Digest
-  uses: Rabatta-ApS/BuildPulse-Discord@v1.0
+  uses: Rabatta-ApS/BuildPulse-Discord@v2.1.0
   with:
     buildPulse-api-token: ${{ secrets.BUILDPULSE_API_TOKEN }}
     discord-webhook: ${{ secrets.DISCORD_BUILDPULSE_WEBHOOK }}
