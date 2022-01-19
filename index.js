@@ -3,12 +3,16 @@ const core = require('@actions/core');
 
 try {
   (async () => {
+    const bpToken = core.getInput('buildPulse-api-token');
+    if (bpToken == null) core.setFailed('Missing BuildPulse API token');
+    const discordWebhook = core.getInput('discord-webhook');
+    if (discordWebhook == null) core.setFailed('Missing Discord webhook');
     const repo = core.getInput('repository') || process.env.GITHUB_REPOSITORY;
     const bpData = (await axios(
       {
         url: `https://buildpulse.io/api/repos/${repo}/tests`,
         headers: {
-          Authorization: `token ${core.getInput('buildPulse-api-token')}`
+          Authorization: `token ${bpToken}`
         }
       }
     )).data;
@@ -34,7 +38,7 @@ try {
   
     axios({
       method: 'POST',
-      url: core.getInput('discord-webhook'),
+      url: discordWebhook,
       data: {
         content: content
       }
