@@ -15,5 +15,5 @@ jobs:
         uses: ./
         with:
           buildPulse-api-token: ${{ secrets.BUILDPULSE_API_TOKEN }}
-          #discord-webhook: ${{ secrets.DISCORD_BUILDPULSE_WEBHOOK }}
+          discord-webhook: ${{ secrets.DISCORD_BUILDPULSE_WEBHOOK }}
           repository: rabatta-aps/rabatta
