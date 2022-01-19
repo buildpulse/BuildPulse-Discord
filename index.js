@@ -10,7 +10,7 @@ try {
     console.log(discordWebhook);
     if (discordWebhook == null) core.setFailed('Missing Discord webhook');
     const repo = core.getInput('repository') || process.env.GITHUB_REPOSITORY;
-    const bpData = (await axios(
+    /*const bpData = (await axios(
       {
         url: `https://buildpulse.io/api/repos/${repo}/tests`,
         headers: {
@@ -44,7 +44,7 @@ try {
       data: {
         content: content
       }
-    });
+    });*/
   })();
 } catch (e) {
   core.setFailed(e);
