@@ -12,7 +12,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Send Digest
-        uses: Rabatta-ApS/BuildPulse-Discord@v2.0.0
+        uses: ./
         with:
           buildPulse-api-token: ${{ secrets.BUILDPULSE_API_TOKEN }}
           discord-webhook: ${{ secrets.DISCORD_BUILDPULSE_WEBHOOK }}
