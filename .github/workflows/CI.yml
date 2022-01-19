@@ -1,0 +1,18 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test-action:
+    runs-on: ubuntu-latest
+    name: Test that the BuildPulse-Discord action WAI
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Send Digest
+        uses: Rabatta-ApS/BuildPulse-Discord@v2.0.0
+        with:
+          buildPulse-api-token: ${{ secrets.BUILDPULSE_API_TOKEN }}
+          discord-webhook: ${{ secrets.DISCORD_BUILDPULSE_WEBHOOK }}
