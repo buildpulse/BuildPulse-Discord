@@ -43,7 +43,7 @@ const core = require('@actions/core');
     content += '```';
   
     try {
-      axios({
+      await axios({
         method: 'POST',
         url: discordWebhook,
         data: {
