@@ -4,10 +4,10 @@ const core = require('@actions/core');
   (async () => {
     const bpToken = core.getInput('buildPulse-api-token');
     core.debug(bpToken);
-    //if (!bpToken) core.setFailed('Missing BuildPulse API token');
+    if (!bpToken) core.setFailed('Missing BuildPulse API token');
     const discordWebhook = core.getInput('discord-webhook');
     core.debug(discordWebhook);
-    //if (!discordWebhook) core.setFailed('Missing Discord webhook');
+    if (!discordWebhook) core.setFailed('Missing Discord webhook');
     const repo = core.getInput('repository') || process.env.GITHUB_REPOSITORY;
     let bpData;
     try {
