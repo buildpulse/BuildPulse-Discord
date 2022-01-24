@@ -1,5 +1,5 @@
 # BuildPulse-Discord
-A Github Action for reporting test information from BuildPulse to a Discord channel using a [Discord Webhook](https://support.discord.com/hc/en-us/articles/228383668-Intro-to-Webhooks)
+A Github Action for reporting test information from [BuildPulse](https://buildpulse.io) to a Discord channel using a [Discord Webhook](https://support.discord.com/hc/en-us/articles/228383668-Intro-to-Webhooks)
 
 ```yml
 - name: Send Digest
