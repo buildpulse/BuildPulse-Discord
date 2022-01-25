@@ -18,6 +18,10 @@ By default the action fetches tests from the repository that it is being run in.
     discord-webhook: ${{ secrets.DISCORD_BUILDPULSE_WEBHOOK }}
     repository: facebook/react
 ```
+### API Token
+You can generate a BuildPulse API token for your organization at `https://buildpulse.io/account/@<organization>/api-token`.
+
+For example, if your organization on GitHub is `https://github.com/facebook`, then you'd visit `https://buildpulse.io/account/@facebook/api-token` to generate your API token.
 ### Example
 See the most disruptive tests so you know exactly where to focus first for maximum impact.
 
