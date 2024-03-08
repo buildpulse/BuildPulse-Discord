@@ -1,5 +1,7 @@
 # BuildPulse-Discord
-A Github Action for reporting test information from BuildPulse to a Discord channel using a [Discord Webhook](https://support.discord.com/hc/en-us/articles/228383668-Intro-to-Webhooks)
+[BuildPulse](https://buildpulse.io) is a CI observability platform that can help you find and [fix flaky tests](https://buildpulse.io/products/flaky-tests).
+
+This Github Action is for reporting test information from BuildPulse to a Discord channel using a [Discord Webhook](https://support.discord.com/hc/en-us/articles/228383668-Intro-to-Webhooks)
 
 ```yml
 - name: Send Digest
